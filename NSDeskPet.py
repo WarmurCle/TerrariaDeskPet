@@ -1238,9 +1238,10 @@ class PtgHook(DPPart):
         if glowstone.get_distance(self.pos[0], self.pos[1], self.targetPos[0], self.targetPos[1]) < 16:
             self.pos[0] = self.targetPos[0]
             self.pos[1] = self.targetPos[1]
-            self.img = "trp/ptg/ph2.png"
+            self.img = "trp/ptg/ph2.png" 
         else:
             self.img = "trp/ptg/ph1.png"
+        self.refreshPM()
         self.a = glowstone.ag(self.pos[0] - self.owner.pos[0], self.pos[1] - self.owner.pos[1])
     def prePaint(self, painter):
         super().other_paint(painter)
